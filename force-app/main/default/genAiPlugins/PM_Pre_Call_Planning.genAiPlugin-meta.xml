@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <aiPluginUtterances>
+        <developerName>utterance_helpmeplan0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>utterance_helpmeplan0</masterLabel>
+        <utterance>Help me plan for my next visit?</utterance>
+    </aiPluginUtterances>
+    <aiPluginUtterances>
+        <developerName>utterance_whatdoesmy1</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>utterance_whatdoesmy1</masterLabel>
+        <utterance>What does my schedule look like?</utterance>
+    </aiPluginUtterances>
+    <aiPluginUtterances>
+        <developerName>utterance_whatdoesmy2</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>utterance_whatdoesmy2</masterLabel>
+        <utterance>What does my day look like?</utterance>
+    </aiPluginUtterances>
+    <description>This topic covers the preparation steps and considerations before making a call/visit to an HCP. This includes identifying key referrers, scheduling visits, and distributing content.
+
+When the user asks: &quot;what does my day look like&quot; or &quot;what does my schedule look like&quot; or &quot;who else could I meet with?&quot; or &quot;yes give me directions&quot;</description>
+    <developerName>PM_Pre_Call_Planning</developerName>
+    <genAiPluginInstructions>
+        <description>DIRECTIONS TO NEXT VISIT
+
+When a user says &quot;yes give me directions&quot; respond with markdown:
+
+Got it — here are walking directions to Dr. Jones&apos;s office from your current location:
+
+**🚶 0.4 miles** — about **8 minutes on foot**
+📍 Start at **Lexington Ave &amp; 58th St**
+➡️ Head south on Lexington Ave
+⬅️ Turn left on 55th St
+🏢 Dr. Jones&apos;s office is at **210 E 55th St, Suite 302**
+
+I’ve also sent a quick availability ping to her office via your connected contact list. If she’s free, I’ll slot the visit into your calendar and queue up her Story.
+
+✅ Want me to prep your pre-call insights now or wait for confirmation?</description>
+        <developerName>instruction_directions0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_directions0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>WHAT DOES MY SCHEDULE LOOK LIKE?
+
+When a user says &quot;what does my schedule look like?&quot; or &quot;what does my day look like?&quot; respond with markdown:
+
+Hey there! You’ve got three scheduled visits today:  
+  
+- **🕘 9:00 AM with Dr. Alison Brown —** she’s shown interest in switching to Immunexis injections. She also opened a dosing guide email last week.  
+- **🕦 11:30 AM with Dr. Walter Schmidt —** he’s exploring our Phase IV study and viewed the trial page twice last week.  
+- **🕓 4:00 PM with Dr. Morita —** he clicked through a patient case study email this morning. 
+  
+🌟 I&apos;ve gone ahead and prepared recommendations and notes and attached them to each of your visits. 
+
+🎧 Need additional help prepping? I’ve also queued up a Story with insights and talking points for each call. Just say, &apos;Start my Story&apos;</description>
+        <developerName>instruction_whatdoesmy1</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_whatdoesmy1</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>WHO ELSE COULD I MEET WITH?
+
+When a user says, &quot;who else could I meet with?&quot; respond with markdown:
+
+No problem — let’s pivot. You’ve still got a solid window.
+
+Here are three nearby HCPs you can reach within the next hour:
+1. **Dr. Lydia Jones — 📍0.4 miles away**, 8-min walk
+📬 Opened our Immunexis co-pay email last week
+🗓️ Last visit: 5 weeks ago
+2. **Dr. Brian Osei — 🚇 1 subway stop**, 12 minutes door-to-door
+🔬 Recently viewed the Phase IV outcomes report
+🛑 No visit logged this quarter
+3. **Dr. Marina Lopez — 🛵 0.7 miles, 5 min by Citi Bike or ride-share**
+📈 Recent spike in new patient starts
+🎯 Near your 5 PM appointment
+
+Want directions or should I message each of them to check availability?</description>
+        <developerName>instruction_whoelsecou2</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_whoelsecou2</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>3 - Pre-Call Planning</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is to assist in the preparation for customer bisits/calls by gathering information, setting objectives, and ensuring all necessary materials are ready.</scope>
+</GenAiPlugin>

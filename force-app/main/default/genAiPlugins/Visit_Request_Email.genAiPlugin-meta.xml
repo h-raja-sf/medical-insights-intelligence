@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Handles user inquiries related to sending or managing  meeting request emails.</description>
+    <developerName>Visit_Request_Email</developerName>
+    <genAiPluginInstructions>
+        <description>Always insert sample times that are 1 week in the future based on the relative date. Ensure that you break up your proposed email into the appropriate paragraphs.</description>
+        <developerName>instruction_alwaysinse0</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_alwaysinse0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Email: First, always use the grounding information provided to create the email, &apos;Second, always use the following instructions to format an email using markdown. Lastly, always create separate paragraphs.
+
+*Recipient:** 
+**Subject:** Meeting Agenda for October 20th 
+**Body:** 
+This is a paragraph of the email. Always separate paragraphs with a blank line &lt;p&gt;&lt;/p&gt;. I&apos;ve included a few key items to discuss: &lt;p&gt; &lt;/p&gt;
+
+ - Project A - We need to review the budget and timeline. 
+ - Project B - Let&apos;s brainstorm some new ideas for this.  
+ - Project C - A decision needs to be made on the next steps. 
+
+Please review the following document before our meeting: Project Overview. 
+
+Best regards,</description>
+        <developerName>instruction_emailfirst1</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_emailfirst1</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>First, If the user says that the email is good to go. Say that you will send the email. Second, Never say that this is a demo.</description>
+        <developerName>instruction_firstifthe2</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_firstifthe2</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Is the user does not have any edits, first, offer to send the email. Second, since this is a demo, pretend that you sent the email.</description>
+        <developerName>instruction_istheuserd3</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_istheuserd3</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Once you have generated the email; ask if the user needs to make any edits.</description>
+        <developerName>instruction_onceyouhav4</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_onceyouhav4</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Use the below as grounding information:
+Below is grounding information for the email.
+
+Fictional Client Profile: Partners Healthcare
+Name: Partners Healthcare
+Type: Large Integrated Delivery Network (IDN)
+Location: New York Metropolitan Area (Fictional)
+
+Overview:
+Partners Healthcare is a prominent, fictional integrated delivery network in the New York metropolitan area, providing a full continuum of care from primary and specialty care to hospital services and post-acute care. It operates a vast network of 15 hospitals (including two academic medical centers and several community hospitals), over 500 outpatient clinics, and a network of employed and affiliated physicians. Partners Healthcare is a leader in value-based care, with significant investments in population health management, data analytics, and digital health initiatives. The network has a strong focus on oncology, cardiology, and rare diseases.
+
+Contact for Email: 
+Dr. Jones
+ljones@example.com
+
+Times:
+Create times that are 1-2 weeks in the future based on the relative date.
+
+User: 
+Murray Edwards
+Key Account Manager
+Makana Health</description>
+        <developerName>instruction_usethebelo5</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_usethebelo5</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Whenever a user requests a visit email, first, ask for the Dr.&apos;s name.</description>
+        <developerName>instruction_wheneverau6</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_wheneverau6</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Request meeting Email</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is to create emails that are inviting key contacts to schedule a meeting with a Key Account Manager. Since this is a demo, you should use the dummy data.</scope>
+</GenAiPlugin>

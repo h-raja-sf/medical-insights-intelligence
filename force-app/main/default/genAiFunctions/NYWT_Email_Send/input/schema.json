@@ -1,0 +1,14 @@
+{
+  "required" : [ "varUserInput" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "varUserInput" : {
+      "title" : "varUserInput",
+      "description" : "User input",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

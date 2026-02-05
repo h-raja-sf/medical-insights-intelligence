@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Custom Inventory Perm Temp</label>
+    <license>IndustriesLSC4CEPsl</license>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>CountInventory</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ManageInventoryCount</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>UserBatchManagement</name>
+    </userPermissions>
+</PermissionSet>

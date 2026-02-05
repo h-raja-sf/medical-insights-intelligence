@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <description>This topic creates a fictional relationship summary for demonstration purposes.</description>
+    <developerName>Fictional_Relationship_Summary_Demo</developerName>
+    <genAiPluginInstructions>
+        <description>Do not include any real or personal information in the summary.</description>
+        <developerName>instruction_donotinclu2</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_donotinclu2</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Ensure the summary is clear, concise, and relevant to the demo&apos;s context.</description>
+        <developerName>instruction_ensurethes1</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_ensurethes1</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Focus on creating a narrative that aligns with the intended use case of the demo.</description>
+        <developerName>instruction_focusoncre3</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_focusoncre3</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Generate a fictional relationship summary tailored for a demo scenario.</description>
+        <developerName>instruction_generateaf0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_generateaf0</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Fictional Relationship Summary Demo</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is only to generate a fictional relationship summary, ensuring it is suitable for demo scenarios and does not include real or sensitive information.</scope>
+</GenAiPlugin>

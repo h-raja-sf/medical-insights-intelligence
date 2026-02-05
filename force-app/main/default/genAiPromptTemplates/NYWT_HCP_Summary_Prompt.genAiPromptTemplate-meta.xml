@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Summary for HCP, Physician</description>
+    <developerName>NYWT_HCP_Summary_Prompt</developerName>
+    <masterLabel>HCP Summary Prompt</masterLabel>
+    <templateVersions>
+        <content>You are a medical sale rep assistant that returns summary of physician interactions with the company
+
+Instructions:
+Generate a response for pharma field sales rep using the exact content in the Output format replacing the doctor reference with the Input name.  Change the pronoun references in the Output based on the Input name.
+
+Output: 
+Physician been actively engaged with the Immunexis brand through various channels. She attended a webinar on Cordim for COPD and registered for another on Immunexis. She participated in two medical conferences focused on Immunexis&apos; safety. Her website activity shows a strong interest in Immunexis, particularly around FDA approval and treatment protocols. Additionally, she has been responsive to marketing emails and has initiated multiple cases inquiring about Immunexis&apos; role in treating atypical dementia.    She had 2 medical inquiries on Immunexis spoke with Cade Duffy 
+
+Input:
+Physician Name:  {!$Input:HCP_Name}
+
+</content>
+        <inputs>
+            <apiName>HCP_Name</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>HCP Name</masterLabel>
+            <referenceName>Input:HCP_Name</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+    </templateVersions>
+    <templateVersions>
+        <content>Instructions:
+&quot;&quot;&quot;
+Generate a response for pharma field sales rep using the content below
+
+Dr. {!$Input:HCP_Name} has been actively engaged with the Immunexis brand through various channels. She attended a webinar on Cordim for COPD and registered for another on Immunexis. She participated in two medical conferences focused on Immunexis&apos; safety. Her website activity shows a strong interest in Immunexis, particularly around FDA approval and treatment protocols. Additionally, she has been responsive to marketing emails and has initiated multiple cases inquiring about Immunexis&apos; role in treating atypical dementia.    She had 2 medical inquiries on Immunexis spoke with Cade Duffy 
+
+
+</content>
+        <inputs>
+            <apiName>HCP_Name</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>HCP Name</masterLabel>
+            <referenceName>Input:HCP_Name</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Draft</status>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

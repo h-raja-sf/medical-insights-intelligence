@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Always evaluate free‑text post‑visit dictation first; decides whether to route to Post‑Visit Agentforce Debrief or Inquiry Flag</description>
+    <developerName>Agent_Router</developerName>
+    <genAiPluginInstructions>
+        <description>ROUTING LOGIC (text only):
+- If the input explicitly says &apos;open/submit/create inquiry/MI/med info&apos; → return: Inquiry Flag
+- Else if the input contains ≥2 distinct elements (e.g., trend + literature request, question + next steps) → return: Post‑Visit Agentforce Debrief
+- Else ask: &apos;File an Inquiry, or generate a Post‑Visit Debrief (Insight + Inquiry + Follow‑up + Reminder)?&apos;
+Return only one of these strings: &apos;Post‑Visit Agentforce Debrief&apos; | &apos;Inquiry Flag&apos;</description>
+        <developerName>instruction_routinglog0</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_routinglog0</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Agent Router</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>✅ In scope
+• Any post‑visit, messy free‑text dictation about a single HCP visit
+• Mentions of trends + literature requests + follow‑ups
+❌ Out of scope
+• Explicit commands to open/submit an Inquiry (route directly to Inquiry Flag)</scope>
+</GenAiPlugin>

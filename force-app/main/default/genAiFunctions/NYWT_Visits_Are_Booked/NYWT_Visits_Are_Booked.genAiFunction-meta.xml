@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This action is invoked from an agent to book an appointment with both Herrera and Chen. Do not consider these names as separate inputs.</description>
+    <invocationTarget>NYWT_Visits_Are_Booked</invocationTarget>
+    <invocationTargetType>flow</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <masterLabel>NYWT Visits Are Booked</masterLabel>
+</GenAiFunction>

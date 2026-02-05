@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <description>Trigger when an MSL asks for Immunexis-related (or competitor) abstracts/posters at upcoming conferences.</description>
+    <developerName>Congress_Abstracts</developerName>
+    <genAiPluginInstructions>
+        <description>Return any 3 of the bullets from the library below in rich text with the following header: ### Congress Abstracts – &lt;today’s date&gt;
+
+Preset Bullet Library  
+- **12 Immunexis posters accepted for ESMO 2025** – focus on real-world data (# P-567).  
+- **Competitor Brand X oral late-breaker on OS benefit** – prepare comparison slide.  
+- **Nuovo abstract italiano sugli outcome pazienti anziani** – pianifica incontro con autore.  
+- **Digital poster on biomarker-driven dosing** – bookmark for KOL inquiry.  
+- **Satellite symposium on immune-related AEs** – suggest attendance.</description>
+        <developerName>instruction_returnanyo0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_returnanyo0</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Congress Abstracts</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>✅ In scope
+• Terms like *abstracts, posters, congress, conference, ESMO, ASCO, comunicati, poster Immunexis*. 
+
+🚫 Out of scope
+• Pure commercial booth logistics or spend limits (Compliance Checklist).</scope>
+</GenAiPlugin>

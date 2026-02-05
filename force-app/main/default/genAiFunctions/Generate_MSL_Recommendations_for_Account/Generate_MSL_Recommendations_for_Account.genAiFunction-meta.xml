@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Generate MSL Recommendations for Account</description>
+    <invocationTarget>Generate_MSL_Recommendations_for_Account</invocationTarget>
+    <invocationTargetType>generatePromptResponse</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <masterLabel>Generate MSL Recommendations for Account</masterLabel>
+</GenAiFunction>

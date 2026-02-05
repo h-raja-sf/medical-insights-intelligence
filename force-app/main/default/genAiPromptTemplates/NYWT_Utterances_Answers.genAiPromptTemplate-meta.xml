@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This template has knowledge based embedded so it does not need to retrieve from externally</description>
+    <developerName>NYWT_Utterances_Answers</developerName>
+    <masterLabel>NYWT_Utterances_Answers</masterLabel>
+    <templateVersions>
+        <content>###
+INSTRUCTIONS
+
+ 1. Analyze the query: Carefully read and understand the user&apos;s question or issue from the QUESTION section.
+ 2. Search KNOWLEDGE: Review the provided company KNOWLEDGE to find relevant information.
+ 3. Evaluate information: Determine if the available information in the KNOWLEDGE section is sufficient to answer the QUESTION.
+ 4. Language Instructions: You must respond in {language}
+ 5. Formulate response: To generate a reply &lt;generated_response&gt; to the user, you must follow these rules
+ a. If the user request cannot by answered knowledge provided, set the &lt;source_id&gt; to NONE and &lt;generated_response&gt; to &quot;Sorry, I can&apos;t find an answer based on the available articles.&quot;
+ 6. Refine and deliver: Ensure your response is polite, professional, concise and in {language} only.
+ 7. Review response: Make sure that have followed all of the above instructions, respond in the desired output format and you only strictly stick to the provided KNOWLEDGE only to formulate your answer.
+ 8. Do not thank the requestor at the end.
+ 9. Use bullet points where possible to make the answer easier to read but repeat a slightly rephrased question as the opening line in the answer.
+
+ ###
+KNOWLEDGE:
+Q1. Top influencers discussing Immunexis on social media and other life sciences platforms
+- Dr. Maria Lundstrom – Rheumatologist with high engagement on biosimilar access and switching.
+- @PharmaScout – Popular X (Twitter) handle sharing early Immunexis uptake trends and payer data.
+- Dr. Arun Patel – Dermatologist featured in Medisphere podcast discussing IL-pathway biosimilars.
+
+Q2. Recent clinical trial data for Immunexis
+- Phase III trial for new indication atopic dermatitis confirmed Immunexis met equivalence criteria vs reference molecule.
+- Switch arm showed consistent outcomes in patients transitioned from originator therapy.
+- Narexulimab posted strong week-16 data in treatment-naive patients, with 75% achieving skin clearance targets.
+
+Q3. Hospitals with rising utilization of biosimilars
+- Greenridge Medical Center reported a 28% increase in biosimilar prescriptions YoY.
+- Northbridge Health implemented a biosimilar-first protocol for inflammatory care units.
+- Coastal Regional Hospital recently adopted Immunexis into its formulary with strong physician buy-in.
+
+Q4. Latest clinical data on IL-23 inhibitors
+- Zarevelimab reported sustained efficacy in chronic dermatologic conditions at week 52.
+- Inflixiremab showed strong remission rates in new autoimmune indications.
+- Lomurelizumab now entering Phase IV with encouraging safety signals and broad label potential.
+
+
+ ###
+QUESTION:
+{!$Input:Query}
+
+ ###
+Response:
+</content>
+        <inputs>
+            <apiName>Query</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Query</masterLabel>
+            <referenceName>Input:Query</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+    </templateVersions>
+    <templateVersions>
+        <content>###
+INSTRUCTIONS
+
+ 1. Analyze the query: Carefully read and understand the user&apos;s question or issue from the QUESTION section.
+ 2. Search KNOWLEDGE: Review the provided company KNOWLEDGE to find relevant information.
+ 3. Evaluate information: Determine if the available information in the KNOWLEDGE section is sufficient to answer the QUESTION.
+ 4. Language Instructions: You must respond in {language}
+ 5. Formulate response: To generate a reply &lt;generated_response&gt; to the user, you must follow these rules
+ a. Find the article-chunk(s) that is most relevant to answer the user query and VERBATIM extract the ID of the article to set &lt;source_id&gt; field in the response JSON. If you are unable to find the relevant article, set &lt;source_id&gt; to NONE.
+ b. Use the relevant article-chunk to generate the response that exactly answers the user&apos;s question and set the &lt;generated response&gt; field.
+ c. If the user request cannot by answered knowledge provided, set the &lt;source_id&gt; to NONE and &lt;generated_response&gt; to &quot;Sorry, I can&apos;t find an answer based on the available articles.&quot;
+ 6. Refine and deliver: Ensure your response is polite, professional, concise and in {language} only.
+ 7. Review response: Make sure that have followed all of the above instructions, respond in the desired output format and you only strictly stick to the provided KNOWLEDGE only to formulate your answer.
+
+ ###
+KNOWLEDGE:
+Q1. Top influencers discussing Immunexis on social media and other life sciences platforms
+- Dr. Maria Lundstrom – Rheumatologist with high engagement on biosimilar access and switching.
+- @PharmaScout – Popular X (Twitter) handle sharing early Immunexis uptake trends and payer data.
+- Dr. Arun Patel – Dermatologist featured in Medisphere podcast discussing IL-pathway biosimilars.
+
+Q2. Recent clinical trial data for Immunexis
+- Phase III trial for new indication atopic dermatitis confirmed Immunexis met equivalence criteria vs reference molecule.
+- Switch arm showed consistent outcomes in patients transitioned from originator therapy.
+- Narexulimab posted strong week-16 data in treatment-naive patients, with 75% achieving skin clearance targets.
+
+Q3. Hospitals with rising utilization of biosimilars
+- Greenridge Medical Center reported a 28% increase in biosimilar prescriptions YoY.
+- Northbridge Health implemented a biosimilar-first protocol for inflammatory care units.
+- Coastal Regional Hospital recently adopted Immunexis into its formulary with strong physician buy-in.
+
+Q4. Latest clinical data on IL-23 inhibitors
+- Zarevelimab reported sustained efficacy in chronic dermatologic conditions at week 52.
+- Inflixiremab showed strong remission rates in new autoimmune indications.
+- Lomurelizumab now entering Phase IV with encouraging safety signals and broad label potential.
+
+
+ ###
+QUESTION:
+{!$Input:Query}
+
+ ###
+Response:
+</content>
+        <inputs>
+            <apiName>Query</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Query</masterLabel>
+            <referenceName>Input:Query</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+    </templateVersions>
+    <templateVersions>
+        <content>###
+INSTRUCTIONS
+
+ 1. Analyze the query: Carefully read and understand the user&apos;s question or issue from the QUESTION section.
+ 2. Search KNOWLEDGE: Review the provided company KNOWLEDGE to find relevant information.
+ 3. Evaluate information: Determine if the available information in the KNOWLEDGE section is sufficient to answer the QUESTION.
+ 4. Language Instructions: You must respond in {language}
+ 5. Formulate response: To generate a reply &lt;generated_response&gt; to the user, you must follow these rules
+ a. If the user request cannot by answered knowledge provided, set the &lt;source_id&gt; to NONE and &lt;generated_response&gt; to &quot;Sorry, I can&apos;t find an answer based on the available articles.&quot;
+ 6. Refine and deliver: Ensure your response is polite, professional, concise and in {language} only.
+ 7. Review response: Make sure that have followed all of the above instructions, respond in the desired output format and you only strictly stick to the provided KNOWLEDGE only to formulate your answer.
+ 8. Do not thank the requestor at the end.
+ 9. Use bullet points where possible to make the answer easier to read but repeat a slightly rephrased question as the opening line in the answer.
+
+ ###
+KNOWLEDGE:
+Q1. Top influencers discussing Immunexis on social media and other life sciences platforms 🎤🌐
+- Dr. Maria Lundstrom – Rheumatologist with high engagement on biosimilar access and switching. 👩‍⚕️🔄💬
+- @PharmaScout – Popular X (Twitter) handle sharing early Immunexis uptake trends and payer data. 📊🐦📈
+- Dr. Arun Patel – Dermatologist featured in Medisphere podcast discussing IL-pathway biosimilars. 👨‍⚕️🎙️🔬
+
+Q2. Recent clinical trial data for Immunexis 📄🔬
+- Phase III trial for new indication atopic dermatitis confirmed Immunexis met equivalence criteria vs reference molecule. ✅🧪🎯
+- Switch arm showed consistent outcomes in patients transitioned from originator therapy. 🔄🤝🟢
+- Narexulimab posted strong week-16 data in treatment-naive patients, with 75% achieving skin clearance targets. 💪🗓️✨
+
+Q3. Hospitals with rising utilization of biosimilars 🏥⬆️
+- Greenridge Medical Center reported a 28% increase in biosimilar prescriptions YoY. 📈➕- 
+- Northbridge Health implemented a biosimilar-first protocol for inflammatory care units. 📜➡️🔥
+- Coastal Regional Hospital recently adopted Immunexis into its formulary with strong physician buy-in. 🏨✅👍
+
+Q4. Latest clinical data on IL-23 inhibitors 🧪📊
+- Zarevelimab reported sustained efficacy in chronic dermatologic conditions at week 52. ⏳🛡️😊
+- Inflixiremab showed strong remission rates in new autoimmune indications. 💪🎯🆕
+- Lomurelizumab now entering Phase IV with encouraging safety signals and broad label potential. ➡️🔬🌟
+
+
+ ###
+QUESTION:
+{!$Input:Query}
+
+ ###
+Response:
+</content>
+        <inputs>
+            <apiName>Query</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>Query</masterLabel>
+            <referenceName>Input:Query</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Draft</status>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

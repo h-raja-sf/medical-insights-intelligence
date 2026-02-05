@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>MedicalInsight</baseObject>
+    <category>other</category>
+    <deployed>true</deployed>
+    <description>Medical Insights</description>
+    <label>Medical Insights</label>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>AI_Action_Score__c</field>
+            <table>MedicalInsight</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>AI_Subject_Tags__c</field>
+            <table>MedicalInsight</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>AI_Product_Tags__c</field>
+            <table>MedicalInsight</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>AI_Account_Tags__c</field>
+            <table>MedicalInsight</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>AI_Cluster_Key__c</field>
+            <table>MedicalInsight</table>
+        </columns>
+        <masterLabel>Medical Insights</masterLabel>
+    </sections>
+</ReportType>

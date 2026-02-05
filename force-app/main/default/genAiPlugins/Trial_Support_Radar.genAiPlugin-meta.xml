@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <description>Trigger when an MSL asks which study sites need help: slow enrolment, data-query backlogs, screen-fail spikes, protocol deviations.</description>
+    <developerName>Trial_Support_Radar</developerName>
+    <genAiPluginInstructions>
+        <description>Choose any three bullets from the library and return as rich text with the following header: ### Trial Support Radar – &lt;today’s date&gt;
+
+Preset Bullet Library  
+- **Site 12 enrolment lag: 2 / 10 pts** – propose PI check-in.  
+- **Query backlog &gt;15 open items at Milano Centro** – offer data-entry refresher.  
+- **Screen-fail surge for ECOG &gt; 2 in Houston** – confirm criteria training.  
+- **Deviazione di protocollo registrata a Roma** – suggerire meeting correttivo.  
+- **Lab kit shortage flagged at Boston site** – arrange resupply.</description>
+        <developerName>instruction_chooseanyt0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_chooseanyt0</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Trial Support Radar</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>✅ In scope
+• Phrases like *study site, enrollment, screen fail, query log, support trial, centro sperimentale, arruolamento*.
+
+🚫 Out of scope
+• Coverage / formulary, compliance, or sales metrics</scope>
+</GenAiPlugin>

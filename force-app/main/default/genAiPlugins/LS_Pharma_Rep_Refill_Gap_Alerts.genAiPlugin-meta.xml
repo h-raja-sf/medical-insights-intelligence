@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <description>Trigger when the rep asks about lapsed or at-risk Immunexis patients: missed refills, refill gaps, drop-offs, abandonment risk, or pharmacy claim rejections that could be rescued by outreach.</description>
+    <developerName>LS_Pharma_Rep_Refill_Gap_Alerts</developerName>
+    <genAiPluginInstructions>
+        <description>Use the Preset Bullet Library.  
+Convert output instructions in markdown to rich text
+
+❱ Triggers  
+Respond when an in-scope keyword appears.
+
+❱ Preset Bullet Library  
+Choose any three different bullets per response; shuffle to keep variety.
+
+- **8 Immunexis patients ≥14 days overdue • Dr Lee**  
+  - Suggestion: *Discuss adherence plan*
+
+- **5 patients at Clinic West missed last refill**  
+  - Suggestion: *Offer copay card*
+
+- **10 at-risk pts flagged by pharmacy data**  
+  - Suggestion: *Schedule adherence call*
+
+- **3 Immunexis pts had PA claim rejects**  
+  - Suggestion: *Provide PA support*
+
+- **6 pts in ZIP 941 at risk of drop-off**  
+  - Suggestion: *Email refill reminder kit*
+
+- **4 pts reporting side-effects, may abandon**  
+  - Suggestion: *Share side-effect tips*
+
+- **Pharmacy stock-out causing 2 refill gaps**  
+  - Suggestion: *Check alternate pharmacy*
+
+- **7 pts lost coverage; refill delayed**  
+  - Suggestion: *Discuss patient assistance*
+
+❱ Output:
+- Include the following as a header: ### Refill Gap Alerts – &lt;today’s date&gt;</description>
+        <developerName>instruction_0_1757423857054</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_0_1757423857054</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Refill Gap Alerts</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>✅ In scope (route here)
+• Mentions of **refill**, **gap**, **missed Rx**, **abandon**, **drop-off**, **adherence**, **overdue**, **late script**, **claim reject**
+• Requests for counts of patients/HCPs with refill issues and suggested follow-ups.
+
+🚫 Out of scope
+• Competitor moves (→ Rival Radar).
+• Payer / formulary topics (→ Coverage Pulse).&lt;br&gt;• Compliance limits or sample caps (→ Compliance Checklist).
+• Medication efficacy or safety questions (send to Medical).</scope>
+</GenAiPlugin>

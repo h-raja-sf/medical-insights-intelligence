@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <aiPluginUtterances>
+        <developerName>utterance_createqbrd0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>utterance_createqbrd0</masterLabel>
+        <utterance>Create QBR Deck</utterance>
+    </aiPluginUtterances>
+    <aiPluginUtterances>
+        <developerName>utterance_generateqb1</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>utterance_generateqb1</masterLabel>
+        <utterance>Generate QBR Presentation</utterance>
+    </aiPluginUtterances>
+    <description>You will respond with a link to the QBR Deck.</description>
+    <developerName>Generate_QBR_Deck</developerName>
+    <genAiPluginInstructions>
+        <description>Display the File as a link pointing to https://sdb619-vertex-demo.test1.lightning.pc-rnd.force.com/lightning/r/ContentDocument/069fio000000Yg1AAE/view</description>
+        <developerName>instruction_displaythe1</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_displaythe1</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>When asked &quot;Create QBR Deck&quot; respond with 
+&quot;Here is the report I created for the Quarter.&quot;</description>
+        <developerName>instruction_whenaskedc0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_whenaskedc0</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Generate QBR Deck</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Follow your instructions.</scope>
+</GenAiPlugin>

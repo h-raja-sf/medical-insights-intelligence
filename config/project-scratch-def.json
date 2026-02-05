@@ -1,0 +1,13 @@
+{
+  "orgName": "MedInsights Test Org",
+  "edition": "Enterprise",
+  "features": ["HealthCloud", "EinsteinAgentforce"],
+  "settings": {
+    "lightningExperienceSettings": {
+      "enableS1DesktopEnabled": true
+    },
+    "healthCloudSettings": {
+      "enableHealthCloud": true
+    }
+  }
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <developerName>KAN_SWOT_Strengths</developerName>
+    <masterLabel>KAN SWOT Strengths</masterLabel>
+    <templateVersions>
+        <content>Take the existing Strengths from: {!$Input:Account_Plan.RelationshipStrengths} and revise them based grounded in data from {!$RecordSnapshot:Account_Plan.Snapshot} to provide more refined strengths.  
+
+Output as rich text then update the following field: {!$Input:Account_Plan.RelationshipStrengths}
+</content>
+        <inputs>
+            <apiName>Account_Plan</apiName>
+            <definition>SOBJECT://AccountPlan</definition>
+            <masterLabel>Account Plan</masterLabel>
+            <referenceName>Input:Account_Plan</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>invocable://getDataForGrounding</definition>
+            <parameters>
+                <definition>primitive://String</definition>
+                <isRequired>true</isRequired>
+                <parameterName>recordId</parameterName>
+                <valueExpression>{!$Input:Account_Plan.Id}</valueExpression>
+            </parameters>
+            <referenceName>RecordSnapshot:Account_Plan</referenceName>
+        </templateDataProviders>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

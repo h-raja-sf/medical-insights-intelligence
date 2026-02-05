@@ -1,0 +1,21 @@
+{
+  "required" : [ "newPrimarySpecialty" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "accountID" : {
+      "title" : "accountID",
+      "description" : "The unique identifier of an Account",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "newPrimarySpecialty" : {
+      "title" : "newPrimarySpecialty",
+      "description" : "The new specialty to be assigned to the account",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

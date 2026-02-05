@@ -1,0 +1,14 @@
+{
+  "required" : [ "providerId" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "providerId" : {
+      "title" : "providerId",
+      "description" : "Expect the user to supply a provider name like “Dr Morita”.\nLookup Records skill converts that name to providerId and stores it in foundProviderId.\nPass foundProviderId to the Flow Caller.\nIf foundProviderId is blank, ask the user for more detail.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

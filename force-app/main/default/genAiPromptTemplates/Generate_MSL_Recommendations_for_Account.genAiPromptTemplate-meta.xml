@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Generate MSL Recommendations for Account</description>
+    <developerName>Generate_MSL_Recommendations_for_Account</developerName>
+    <masterLabel>Generate MSL Recommendations for Account</masterLabel>
+    <templateVersions>
+        <content>Your job is to generate MSL Recommendations for an account and include an offer to draft an email or create a task if it&apos;s required.  The recommendation should be brief and should be a clear statement of what action you can do to help the MSL
+
+You will use the context information provided here:
+1. Partners Health Care is having many conversations about transportation issues which is inhibiting enrollment for clinical trial. An email should be sent to an internal colleague who is in charge of participant services for that clinical trial which is named &quot;Immunexis Phase III Extension Trial.&quot;
+2. Partners Health Care needs a visit or call so MSL can review RWE data on Immunexis durability with them. A task should be created to remind the MSL to schedule that visit or call.
+3. There&apos;s an upcoming visit with the Partners Health Care and MSL has an open inquiry from them regarding dose tapering. A task should be created to remind the MSL to respond to that inquiry.
+
+Use &quot;Partners Health Care&quot; to refer to the account by name. Never generically refer to it as &quot;account&quot;.
+
+You response should follow the  numbered list format below and it should be in the format of what action is required and what you can do to assist the MSL.  Please adhere to the tone and format in the example below.  It is CRITICAL that you provide the recommendations in the same order that the context was provided. 
+
+Always include a line break (extra empty line) between the options.  Do not include any asterisks or other special characters in the response.
+
+Example format:
+
+Recommendations
+1. Discuss the transportation issues affecting enrollment for the &quot;Immunexis Phase III Extension Trial&quot; with the participant services team. I can draft an email for you to send to initiate the discussion.   
+  
+2. Schedule a visit or call to review the RWE data on Immunexis durability with the account. I can create a task to remind you to do this.   
+  
+3. Respond to the open inquiry regarding dose tapering before the upcoming visit with the account. I can create a task to remind you to do this.
+
+</content>
+        <inputs>
+            <apiName>AccountId</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>AccountId</masterLabel>
+            <referenceName>Input:AccountId</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+    </templateVersions>
+    <templateVersions>
+        <content>Your job is to generate MSL Recommendations for an account and include an offer to draft an email or create a task if it&apos;s required.  The recommendation should be brief and should be a clear statement of what action you can do to help the MSL
+
+You will use the context information provided here:
+1. Account is having many conversations about transportation issues which is inhibiting enrollment for clinical trial. An email should be sent to an internal colleague who is in charge of participant services for that clinical trial which is named &quot;Immunexis Phase III Extension Trial.&quot;
+2. Account needs a visit or call so MSL can review RWE data on Immunexis durability with them. A task should be created to remind the MSL to schedule that visit or call.
+3. There&apos;s an upcoming visit with the Account and MSL has an open inquiry from them regarding dose tapering. A task should be created to remind the MSL to respond to that inquiry.
+
+
+You response should follow the numbered list format below and it should be in the format of what action is required and what you can do to assist the MSL.  Please adhere to the tone and format in the example below.
+
+1. Discuss the transportation issues affecting enrollment for the &quot;Immunexis Phase III Extension Trial&quot; with the participant services team. I can draft an email for you to send to initiate the discussion. 
+2. Schedule a visit or call to review the RWE data on Immunexis durability with the account. I can create a task to remind you to do this.
+3. Respond to the open inquiry regarding dose tapering before the upcoming visit with the account. I can create a task to remind you to do this.
+</content>
+        <inputs>
+            <apiName>AccountId</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>AccountId</masterLabel>
+            <referenceName>Input:AccountId</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+    </templateVersions>
+    <templateVersions>
+        <content>Your job is to generate MSL Recommendations for an account and include an offer to draft an email or create a task if it&apos;s required.  The recommendation should be brief and should be a clear statement of what action you can do to help the MSL
+
+You will use the context information provided here:
+1. Account is having many conversations about transportation issues which is inhibiting enrollment for clinical trial. An email should be sent to an internal colleague who is in charge of participant services for that clinical trial which is named &quot;Immunexis Phase III Extension Trial.&quot;
+2. Account needs a visit or call so MSL can review RWE data on Immunexis durability with them. A task should be created to remind the MSL to schedule that visit or call.
+3. There&apos;s an upcoming visit with the Account and MSL has an open inquiry from them regarding dose tapering. A task should be created to remind the MSL to respond to that inquiry.
+
+
+You response should follow the numbered list format below and it should be in the format of what action is required and what you can do to assist the MSL.  Please adhere to the tone and format in the example below.  It is CRITICAL that you provide the recommendations in the same order that the context was provided.
+
+1. Discuss the transportation issues affecting enrollment for the &quot;Immunexis Phase III Extension Trial&quot; with the participant services team. I can draft an email for you to send to initiate the discussion. 
+2. Schedule a visit or call to review the RWE data on Immunexis durability with the account. I can create a task to remind you to do this.
+3. Respond to the open inquiry regarding dose tapering before the upcoming visit with the account. I can create a task to remind you to do this.
+</content>
+        <inputs>
+            <apiName>AccountId</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>AccountId</masterLabel>
+            <referenceName>Input:AccountId</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Draft</status>
+    </templateVersions>
+    <templateVersions>
+        <content>Your job is to generate MSL Recommendations for an account and include an offer to draft an email or create a task if it&apos;s required.  The recommendation should be brief and should be a clear statement of what action you can do to help the MSL
+
+You will use the context information provided here:
+1. Account is having many conversations about transportation issues which is inhibiting enrollment for clinical trial. An email should be sent to an internal colleague who is in charge of participant services for that clinical trial which is named &quot;Immunexis Phase III Extension Trial.&quot;
+2. Account needs a visit or call so MSL can review RWE data on Immunexis durability with them. A task should be created to remind the MSL to schedule that visit or call.
+3. There&apos;s an upcoming visit with the Account and MSL has an open inquiry from them regarding dose tapering. A task should be created to remind the MSL to respond to that inquiry.
+
+
+You response should follow the html numbered list format below and it should be in the format of what action is required and what you can do to assist the MSL.  Please adhere to the tone and format in the example below.  It is CRITICAL that you provide the recommendations in the same order that the context was provided. Please always include a line break (extra empty line) between the options.  It would be good if you can emphasize the number bullet by making it larger and bold.
+
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+ &lt;meta charset=&quot;UTF-8&quot; /&gt;
+ &lt;title&gt;Next Actions&lt;/title&gt;
+ &lt;style&gt;
+  ol { margin: 0; padding-left: 1.25rem; }
+  /* Bold only the numbered bullets */
+  ol li::marker { font-weight: 700; }
+  body { font-family: Arial, Helvetica, sans-serif; line-height: 1.4; }
+ &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ &lt;ol&gt;
+  &lt;li&gt;Discuss the transportation issues affecting enrollment for the &quot;Immunexis Phase III Extension Trial&quot; with the participant services team. I can draft an email for you to send to initiate the discussion.&lt;/li&gt;
+  &lt;li&gt;Schedule a visit or call to review the RWE data on Immunexis durability with the account. I can create a task to remind you to do this.&lt;/li&gt;
+  &lt;li&gt;Respond to the open inquiry regarding dose tapering before the upcoming visit with the account. I can create a task to remind you to do this.&lt;/li&gt;
+ &lt;/ol&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</content>
+        <inputs>
+            <apiName>AccountId</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>AccountId</masterLabel>
+            <referenceName>Input:AccountId</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+    </templateVersions>
+    <templateVersions>
+        <content>Your job is to generate MSL Recommendations for an account and include an offer to draft an email or create a task if it&apos;s required.  The recommendation should be brief and should be a clear statement of what action you can do to help the MSL
+
+You will use the context information provided here:
+1. Account is having many conversations about transportation issues which is inhibiting enrollment for clinical trial. An email should be sent to an internal colleague who is in charge of participant services for that clinical trial which is named &quot;Immunexis Phase III Extension Trial.&quot;
+2. Account needs a visit or call so MSL can review RWE data on Immunexis durability with them. A task should be created to remind the MSL to schedule that visit or call.
+3. There&apos;s an upcoming visit with the Account and MSL has an open inquiry from them regarding dose tapering. A task should be created to remind the MSL to respond to that inquiry.
+
+
+You response should follow the  numbered list format below and it should be in the format of what action is required and what you can do to assist the MSL.  Please adhere to the tone and format in the example below.  It is CRITICAL that you provide the recommendations in the same order that the context was provided. 
+
+Always include a line break (extra empty line) between the options.  Emphasize the number bullet by making it larger and bold. Emphasize &quot;Recommendations&quot; by making it bold.
+
+Example format:
+
+Recommendations
+1. Discuss the transportation issues affecting enrollment for the &quot;Immunexis Phase III Extension Trial&quot; with the participant services team. I can draft an email for you to send to initiate the discussion.   
+  
+2. Schedule a visit or call to review the RWE data on Immunexis durability with the account. I can create a task to remind you to do this.   
+  
+3. Respond to the open inquiry regarding dose tapering before the upcoming visit with the account. I can create a task to remind you to do this.
+
+</content>
+        <inputs>
+            <apiName>AccountId</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>AccountId</masterLabel>
+            <referenceName>Input:AccountId</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+    </templateVersions>
+    <templateVersions>
+        <content>Your job is to generate MSL Recommendations for an account and include an offer to draft an email or create a task if it&apos;s required.  The recommendation should be brief and should be a clear statement of what action you can do to help the MSL
+
+You will use the context information provided here:
+1. Account is having many conversations about transportation issues which is inhibiting enrollment for clinical trial. An email should be sent to an internal colleague who is in charge of participant services for that clinical trial which is named &quot;Immunexis Phase III Extension Trial.&quot;
+2. Account needs a visit or call so MSL can review RWE data on Immunexis durability with them. A task should be created to remind the MSL to schedule that visit or call.
+3. There&apos;s an upcoming visit with the Account and MSL has an open inquiry from them regarding dose tapering. A task should be created to remind the MSL to respond to that inquiry.
+
+
+You response should follow the  numbered list format below and it should be in the format of what action is required and what you can do to assist the MSL.  Please adhere to the tone and format in the example below.  It is CRITICAL that you provide the recommendations in the same order that the context was provided. 
+
+Always include a line break (extra empty line) between the options.  Make the number bullet larger and bold. Make &quot;Recommendations&quot;  bold. Do not include any asterisks or other special characters in the response.
+
+Example format:
+
+Recommendations
+1. Discuss the transportation issues affecting enrollment for the &quot;Immunexis Phase III Extension Trial&quot; with the participant services team. I can draft an email for you to send to initiate the discussion.   
+  
+2. Schedule a visit or call to review the RWE data on Immunexis durability with the account. I can create a task to remind you to do this.   
+  
+3. Respond to the open inquiry regarding dose tapering before the upcoming visit with the account. I can create a task to remind you to do this.
+
+</content>
+        <inputs>
+            <apiName>AccountId</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>AccountId</masterLabel>
+            <referenceName>Input:AccountId</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+    </templateVersions>
+    <templateVersions>
+        <content>Your job is to generate MSL Recommendations for an account and include an offer to draft an email or create a task if it&apos;s required.  The recommendation should be brief and should be a clear statement of what action you can do to help the MSL
+
+You will use the context information provided here:
+1. Account is having many conversations about transportation issues which is inhibiting enrollment for clinical trial. An email should be sent to an internal colleague who is in charge of participant services for that clinical trial which is named &quot;Immunexis Phase III Extension Trial.&quot;
+2. Account needs a visit or call so MSL can review RWE data on Immunexis durability with them. A task should be created to remind the MSL to schedule that visit or call.
+3. There&apos;s an upcoming visit with the Account and MSL has an open inquiry from them regarding dose tapering. A task should be created to remind the MSL to respond to that inquiry.
+
+
+You response should follow the  numbered list format below and it should be in the format of what action is required and what you can do to assist the MSL.  Please adhere to the tone and format in the example below.  It is CRITICAL that you provide the recommendations in the same order that the context was provided. 
+
+Always include a line break (extra empty line) between the options.  Do not include any asterisks or other special characters in the response.
+
+Example format:
+
+Recommendations
+1. Discuss the transportation issues affecting enrollment for the &quot;Immunexis Phase III Extension Trial&quot; with the participant services team. I can draft an email for you to send to initiate the discussion.   
+  
+2. Schedule a visit or call to review the RWE data on Immunexis durability with the account. I can create a task to remind you to do this.   
+  
+3. Respond to the open inquiry regarding dose tapering before the upcoming visit with the account. I can create a task to remind you to do this.
+
+</content>
+        <inputs>
+            <apiName>AccountId</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>AccountId</masterLabel>
+            <referenceName>Input:AccountId</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+    </templateVersions>
+    <templateVersions>
+        <content>Your job is to generate MSL Recommendations for an account and include an offer to draft an email or create a task if it&apos;s required.  The recommendation should be brief and should be a clear statement of what action you can do to help the MSL.
+
+You will use the context information provided here:
+1. Account is having many conversations about transportation issues which is inhibiting enrollment for clinical trial. An email should be sent to an internal colleague who is in charge of participant services for that clinical trial which is named &quot;Immunexis Phase III Extension Trial.&quot;
+2. Account needs a visit or call so MSL can review RWE data on Immunexis durability with them. A task should be created to remind the MSL to schedule that visit or call.
+3. There&apos;s an upcoming visit with the Account and MSL has an open inquiry from them regarding dose tapering. A task should be created to remind the MSL to respond to that inquiry.
+
+
+You response should follow the  numbered list format below and it should be in the format of what action is required and what you can do to assist the MSL.  Please adhere to the tone and format in the example below.  It is CRITICAL that you provide the recommendations in the same order that the context was provided. Do not refer to the account in your response in a generic way.  Refer to it as Partners Health Care.
+
+Always include a line break (extra empty line) between the options.  Emphasize the number bullet by making it larger and bold. Emphasize &quot;Recommendations&quot; by making it bold.
+
+Example format:
+
+Recommendations
+1. Discuss the transportation issues affecting enrollment for the &quot;Immunexis Phase III Extension Trial&quot; with the participant services team. I can draft an email for you to send to initiate the discussion.   
+  
+2. Schedule a visit or call to review the RWE data on Immunexis durability with the account. I can create a task to remind you to do this.   
+  
+3. Respond to the open inquiry regarding dose tapering before the upcoming visit with the account. I can create a task to remind you to do this.
+
+</content>
+        <inputs>
+            <apiName>AccountId</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>AccountId</masterLabel>
+            <referenceName>Input:AccountId</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

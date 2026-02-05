@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Insight_Category__c</fullName>
+    <description>Classification of medical insight for routing and outcome measurement</description>
+    <inlineHelpText>Categorize the insight to enable proper routing and downstream action tracking.</inlineHelpText>
+    <label>Insight Category</label>
+    <required>true</required>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Clinical Trial Design</fullName>
+                <default>false</default>
+                <label>Clinical Trial Design</label>
+            </value>
+            <value>
+                <fullName>Content Gap</fullName>
+                <default>false</default>
+                <label>Content Gap</label>
+            </value>
+            <value>
+                <fullName>Endpoint Preference</fullName>
+                <default>false</default>
+                <label>Endpoint Preference</label>
+            </value>
+            <value>
+                <fullName>Guideline Feedback</fullName>
+                <default>false</default>
+                <label>Guideline Feedback</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Payer Objection</fullName>
+                <default>false</default>
+                <label>Payer Objection</label>
+            </value>
+            <value>
+                <fullName>Product Feedback</fullName>
+                <default>false</default>
+                <label>Product Feedback</label>
+            </value>
+            <value>
+                <fullName>Safety Signal</fullName>
+                <default>false</default>
+                <label>Safety Signal</label>
+            </value>
+            <value>
+                <fullName>Treatment Patterns</fullName>
+                <default>false</default>
+                <label>Treatment Patterns</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <developerName>KAM_Recommendations_Prompt</developerName>
+    <masterLabel>*KAM Recommendations Prompt</masterLabel>
+    <templateVersions>
+        <content>ROLE
+You are an expert Key Account Planning Agent. Your mission is to optimize a Pharmaceutical Sales Key Account Manager&apos;s action plan for a strategic account in order to ensure the highest likelihood of success. 
+
+##
+
+GROUNDING
+Key Account Plan Objectives:
+{!$Flow:KAM_Prompt_Enhancement_Flow.Prompt}
+Action Plan Name: {!$Flow:KAM_Prompt_Enhancement_Flow.Prompt}
+Assessment Tasks: {!$Flow:KAM_Prompt_Enhancement_Flow.Prompt}
+
+INSTRUCTIONS
+1. **Analyze:** First, internally analyze the provided **Key Objectives**, the **action plan name**, and the **Assessment Tasks**. Assess their alignment and logical sequence. 2. **Generate Recommendations:** Create a single recommended task for the KAM. Ensure that the task you recommended is the highest impact task.
+
+*Output Format* 
+Format for the task. **Key Objectives:** [Copy the objectives here] **Action Plan Name:** [Copy the action plan name here] Recommended Tasks** --- **Task Name:** **Task Description:** Include a score and why you made that recommendation. 
+
+Example:
+**Key Objectives:** Enhance patient outcomes at Partners HealthCare by optimizing diagnostic protocols for Immunexis, aligning them with NCCN Guidelines.  
+**Action Plan Name:** Identify &amp; Address Diagnostic Gaps 
+**Task Name:** Conduct Stakeholder Interviews  
+**Task Description:** Engage with key stakeholders, including clinicians and pathologists, to gather insights on current diagnostic challenges and gaps. This will facilitate a more tailored approach to protocol optimization.  
+**Score:** 9/10. This task directly addresses the understanding of current protocols and identifies specific areas for improvement.  
+
+
+
+
+</content>
+        <inputs>
+            <apiName>varInputAccountRecord</apiName>
+            <definition>SOBJECT://Account</definition>
+            <masterLabel>varInputAccountRecord</masterLabel>
+            <referenceName>Input:varInputAccountRecord</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>flow://KAM_Prompt_Enhancement_Flow</definition>
+            <parameters>
+                <definition>SOBJECT://Account</definition>
+                <isRequired>true</isRequired>
+                <parameterName>varInputAccountRecord</parameterName>
+                <valueExpression>{!$Input:varInputAccountRecord}</valueExpression>
+            </parameters>
+            <referenceName>Flow:KAM_Prompt_Enhancement_Flow</referenceName>
+        </templateDataProviders>
+    </templateVersions>
+    <templateVersions>
+        <content>ROLE
+You are a Key Account Manager at a pharmaceutical company. Your role is to build strategic relationships with hospitals, GPOs, and buying committees in order to create a strategic relationship with your customer that leads to more revenue. 
+##
+
+##
+GROUNDING INFORMATION
+These are the current key objectives, and tasks that are already on the account plan.
+Key Objectives: Test{!$Flow:KAM_Prompt_Enhancement_Flow.Prompt}
+Action Plan Name: {!$Flow:KAM_Prompt_Enhancement_Flow.Prompt}
+Individual Assessment Task Details: {!$Flow:KAM_Prompt_Enhancement_Flow.Prompt}
+
+##
+
+INSTRUCTIONS
+Review the key objectives and tasks that are already on the account plan, and based on what you find, create recommendations of new tasks that an the Key Account Manager should add to the account plan. For each task that you suggest, associate to the correct key objective and action plan name. The order you display your response should be Key Objective, Action Plan Name, Task Name, Description. 
+</content>
+        <inputs>
+            <apiName>varInputAccountRecord</apiName>
+            <definition>SOBJECT://Account</definition>
+            <masterLabel>varInputAccountRecord</masterLabel>
+            <referenceName>Input:varInputAccountRecord</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>flow://KAM_Prompt_Enhancement_Flow</definition>
+            <parameters>
+                <definition>SOBJECT://Account</definition>
+                <isRequired>true</isRequired>
+                <parameterName>varInputAccountRecord</parameterName>
+                <valueExpression>{!$Input:varInputAccountRecord}</valueExpression>
+            </parameters>
+            <referenceName>Flow:KAM_Prompt_Enhancement_Flow</referenceName>
+        </templateDataProviders>
+    </templateVersions>
+    <templateVersions>
+        <content>ROLE
+You are a Key Account Manager at a pharmaceutical company. Your role is to build strategic relationships with hospitals, GPOs, and buying committees in order to create a strategic relationship with your customer that leads to more revenue. 
+##
+
+##
+GROUNDING INFORMATION
+These are the current key objectives, and tasks that are already on the account plan.
+Key Objectives: Test{!$Flow:KAM_Prompt_Enhancement_Flow.Prompt}
+Action Plan Name: {!$Flow:KAM_Prompt_Enhancement_Flow.Prompt}
+Individual Assessment Task Details: {!$Flow:KAM_Prompt_Enhancement_Flow.Prompt}
+
+##
+
+INSTRUCTIONS
+Review the key objectives and tasks that are already on the account plan, and based on what you find, create recommendations of new tasks that an the Key Account Manager should add to the account plan. For each task that you suggest, associate to the correct key objective and action plan name. The order you display your response should be Key Objective, Action Plan Name, Task Name, Description.  
+
+EXAMPLE:
+**Key Objective:** Optimize Diagnostic Protocols for Improved Patient Outcomes  
+**Action Plan Name:** Identify &amp; Address Diagnostic Gaps  
+**Task Name:** Conduct Stakeholder Interviews  
+**Description:** Engage with key stakeholders to gather insights on current diagnostic challenges and areas for improvement.
+
+/
+
+**Key Objective:** Optimize Diagnostic Protocols for Improved Patient Outcomes  
+**Action Plan Name:** Implement &amp; Monitor Protocol Enhancements  
+**Task Name:** Develop Feedback Mechanism  
+**Description:** Create a system for collecting feedback from healthcare providers on the effectiveness of the newly implemented protocols.
+
+
+</content>
+        <inputs>
+            <apiName>varInputAccountRecord</apiName>
+            <definition>SOBJECT://Account</definition>
+            <masterLabel>varInputAccountRecord</masterLabel>
+            <referenceName>Input:varInputAccountRecord</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>flow://KAM_Prompt_Enhancement_Flow</definition>
+            <parameters>
+                <definition>SOBJECT://Account</definition>
+                <isRequired>true</isRequired>
+                <parameterName>varInputAccountRecord</parameterName>
+                <valueExpression>{!$Input:varInputAccountRecord}</valueExpression>
+            </parameters>
+            <referenceName>Flow:KAM_Prompt_Enhancement_Flow</referenceName>
+        </templateDataProviders>
+    </templateVersions>
+    <templateVersions>
+        <content>ROLE
+You are a Key Account Manager at a pharmaceutical company. Your role is to build strategic relationships with hospitals, GPOs, and buying committees in order to create a strategic relationship with your customer that leads to more revenue. 
+##
+
+##
+GROUNDING INFORMATION
+These are the current key objectives, and tasks that are already on the account plan.
+Key Objectives: Test{!$Flow:KAM_Prompt_Enhancement_Flow.Prompt}
+Action Plan Name: {!$Flow:KAM_Prompt_Enhancement_Flow.Prompt}
+Individual Assessment Task Details: {!$Flow:KAM_Prompt_Enhancement_Flow.Prompt}
+
+##
+
+INSTRUCTIONS
+Review the key objectives and tasks that are already on the account plan, and based on what you find, create recommendations of new tasks that an the Key Account Manager should add to the account plan. For each task that you suggest, associate to the correct key objective and action plan name. The order you display your response should be Key Objective, Action Plan Name, Task Name, Description.  Add an effectiveness score and why you rated it that way.
+
+EXAMPLE:
+**Key Objective:** Optimize Diagnostic Protocols for Improved Patient Outcomes  
+**Action Plan Name:** Identify &amp; Address Diagnostic Gaps  
+**Task Name:** Conduct Stakeholder Interviews  
+**Description:** Engage with key stakeholders to gather insights on current diagnostic challenges and areas for improvement.
+
+/
+
+**Key Objective:** Optimize Diagnostic Protocols for Improved Patient Outcomes  
+**Action Plan Name:** Implement &amp; Monitor Protocol Enhancements  
+**Task Name:** Develop Feedback Mechanism  
+**Description:** Create a system for collecting feedback from healthcare providers on the effectiveness of the newly implemented protocols.
+
+
+</content>
+        <inputs>
+            <apiName>varInputAccountRecord</apiName>
+            <definition>SOBJECT://Account</definition>
+            <masterLabel>varInputAccountRecord</masterLabel>
+            <referenceName>Input:varInputAccountRecord</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>flow://KAM_Prompt_Enhancement_Flow</definition>
+            <parameters>
+                <definition>SOBJECT://Account</definition>
+                <isRequired>true</isRequired>
+                <parameterName>varInputAccountRecord</parameterName>
+                <valueExpression>{!$Input:varInputAccountRecord}</valueExpression>
+            </parameters>
+            <referenceName>Flow:KAM_Prompt_Enhancement_Flow</referenceName>
+        </templateDataProviders>
+    </templateVersions>
+    <templateVersions>
+        <content>ROLE
+You are an expert Key Account Planning Agent. Your mission is to optimize a Pharmaceutical Sales Key Account Manager&apos;s action plan for a strategic account in order to ensure the highest likelihood of success. 
+
+##
+
+GROUNDING
+Key Account Plan Objectives:
+{!$Flow:KAM_Prompt_Enhancement_Flow.Prompt}
+Action Plan Name: {!$Flow:KAM_Prompt_Enhancement_Flow.Prompt}
+Assessment Tasks: {!$Flow:KAM_Prompt_Enhancement_Flow.Prompt}
+
+INSTRUCTIONS
+1. **Analyze:** First, internally analyze the provided **Key Objectives**, the **action plan name**, and the **Assessment Tasks**. Assess their alignment and logical sequence. 2. **Generate Recommendations:** Create a single recommended task for the KAM. Ensure that the task you recommended is the highest impact task.
+
+*Output Format* 
+Format for the task. **Key Objectives:** [Copy the objectives here] **Action Plan Name:** [Copy the action plan name here] Recommended Tasks** --- **Task Name:** **Task Description:** Include a score and why you made that recommendation. 
+
+Example:
+**Key Objectives:** Enhance patient outcomes at Partners HealthCare by optimizing diagnostic protocols for Immunexis, aligning them with NCCN Guidelines.  
+**Action Plan Name:** Identify &amp; Address Diagnostic Gaps 
+**Task Name:** Conduct Stakeholder Interviews  
+**Task Description:** Engage with key stakeholders, including clinicians and pathologists, to gather insights on current diagnostic challenges and gaps. This will facilitate a more tailored approach to protocol optimization.  
+**Score:** 9/10. This task directly addresses the understanding of current protocols and identifies specific areas for improvement.  
+
+
+
+
+</content>
+        <inputs>
+            <apiName>varInputAccountRecord</apiName>
+            <definition>SOBJECT://Account</definition>
+            <masterLabel>varInputAccountRecord</masterLabel>
+            <referenceName>Input:varInputAccountRecord</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Draft</status>
+        <templateDataProviders>
+            <definition>flow://KAM_Prompt_Enhancement_Flow</definition>
+            <parameters>
+                <definition>SOBJECT://Account</definition>
+                <isRequired>true</isRequired>
+                <parameterName>varInputAccountRecord</parameterName>
+                <valueExpression>{!$Input:varInputAccountRecord}</valueExpression>
+            </parameters>
+            <referenceName>Flow:KAM_Prompt_Enhancement_Flow</referenceName>
+        </templateDataProviders>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

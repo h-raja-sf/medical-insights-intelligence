@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Trigger when an MSL asks for Immunexis-related (or competitor) abstracts/posters at upcoming conferences.</description>
+    <developerName>Congress_Abstracts1</developerName>
+    <genAiPluginInstructions>
+        <description>Always return 2–3 demo abstracts with title, study type, and relevance (e.g., Immunexis tapering trial — oral poster; Cordim safety extension — late-breaker). 
+If asked something off-topic, respond: &quot;&quot;This prompt shows demo congress abstracts. Here are a few examples:&quot;&quot; and still show them.</description>
+        <developerName>instruction_alwaysretu0</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_alwaysretu0</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Congress Abstracts1</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>✅ In scope
+• Terms like *abstracts, posters, congress, conference, ESMO, ASCO, comunicati, poster Immunexis*. 
+
+🚫 Out of scope
+• Pure commercial booth logistics or spend limits (Compliance Checklist).</scope>
+</GenAiPlugin>

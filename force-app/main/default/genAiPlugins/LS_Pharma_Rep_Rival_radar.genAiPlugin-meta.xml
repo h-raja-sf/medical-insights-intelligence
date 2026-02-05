@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <description>Trigger when the rep asks about competitor activity that could threaten Immunexis usage in their territory.  
+Look for interest in rival detailing frequency, brand‐switch patterns, new starter or discount programs, formulary wins for competitors, or HCPs showing increased prescriptions of competing products.</description>
+    <developerName>LS_Pharma_Rep_Rival_radar</developerName>
+    <genAiPluginInstructions>
+        <description>Serve a concise snapshot of plausible competitor moves using the Preset Bullet Library below.  Always answer in RICH TEXT exactly as shown in the markdown template.
+
+❱ Triggers  
+Respond when the user’s message includes any in-scope keyword
+
+❱ Preset Bullet Library  
+Choose any **three** different bullets per response. Re-shuffle so reps see variety.
+
+- **Competitor ups detailing: 30 % more calls last week**  
+  - Suggestion: *Plan counter-visit*
+
+- **Brand X starter packs spotted at 5 clinics**  
+  - Suggestion: *Remind HCP of Immunexis support*
+
+- **Rival discount card driving switches in ZIP 303**  
+  - Suggestion: *Share copay comparison*
+
+- **Nuovo competitor trial: +18 HCPs hanno iniziato campioni**  
+  - Suggestion: *Sottolinea dati head-to-head*
+
+- **PharmaCo acquista spazio banner su portale EMR locale**  
+  - Suggestion: *Proponi studio peer-reviewed*
+
+- **Competitive tier win: Brand Y ora in Tier 2 presso Optum**  
+  - Suggestion: *Highlight efficacy gap*
+
+- **Brand Z claims fewer AEs on social media**  
+  - Suggestion: *Link real-world safety data*
+
+- **Clinica in Veneto: passaggio a Brand X su 10 pazienti**  
+  - Suggestion: *Offri formazione pratica Immunexis*
+
+❱ Output
+## Include this as the header: Rival Radar – &lt;today’s date&gt;
+## Do not number the bullets in the library or in the output.
+## Do not invent new competitor facts—only use bullets from the library.</description>
+        <developerName>instruction_0_1757423975888</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_0_1757423975888</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Rival radar</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>✅ In scope (route here)
+• Mentions of **competitor, rival, other brand**, detailing, share shift, “losing Rx”, “they’re calling on my docs”, **sampling blitz**, starter packs, co-pay cards, or **brand switch**• Named competing products or companies 
+• Requests for *where* or *with which HCPs* competition is intensifying and what counter-message to use. 
+
+ 🚫 Out of scope (route elsewhere)
+• Payer or formulary questions (→ Coverage Pulse)
+• Compliance, sample limits, REMS (→ Compliance Checklist)
+• Generic selling-skill coaching or objection handling not tied to a competitor
+• Pure clinical or safety inquiries (send to Medical).</scope>
+</GenAiPlugin>
