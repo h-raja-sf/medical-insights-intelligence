@@ -92,7 +92,7 @@ Then update `sfdx-project.json`:
 {
   "packageDirectories": [
     {
-      "path": "force-app",
+      "path": "package",
       "default": true,
       "package": "Medical Insights Intelligence",
       "versionName": "ver 1.0",
@@ -114,7 +114,7 @@ sf package create \
   --name "Medical Insights Intelligence" \
   --description "AI-Powered Field Intelligence Capture for Life Sciences" \
   --package-type Unlocked \
-  --path force-app \
+  --path package \
   --target-dev-hub devhub-prod
 ```
 
@@ -192,7 +192,7 @@ https://login.salesforce.com/packaging/installPackage.apexp?p0=04t...
 {
   "packageDirectories": [
     {
-      "path": "force-app",
+      "path": "package",
       "default": true,
       "package": "Medical Insights Intelligence",
       "versionName": "Winter 2026",
@@ -225,7 +225,7 @@ sf package create \
   --name "Medical Insights Intelligence" \
   --description "AI-Powered Field Intelligence Capture for Life Sciences" \
   --package-type Managed \
-  --path force-app \
+  --path package \
   --target-dev-hub devhub-prod
 ```
 
@@ -276,7 +276,7 @@ sf package create \
   --name "Medical Insights Intelligence" \
   --description "AI-Powered Field Intelligence Capture for Life Sciences" \
   --package-type Unlocked \
-  --path force-app
+  --path package
 
 if [ $? -ne 0 ]; then
   echo "❌ Package creation failed"

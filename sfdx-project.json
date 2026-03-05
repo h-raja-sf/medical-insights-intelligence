@@ -1,12 +1,22 @@
 {
   "packageDirectories": [
     {
+      "path": "package",
+      "default": true,
+      "package": "Medical Insights Intelligence",
+      "versionName": "Winter 2026",
+      "versionNumber": "1.0.0.NEXT"
+    },
+    {
       "path": "force-app",
-      "default": true
+      "default": false
     }
   ],
   "name": "medical-insights-package",
   "namespace": "",
   "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "65.0"
+  "sourceApiVersion": "65.0",
+  "packageAliases": {
+    "Medical Insights Intelligence": "0Hoam00000036qTCAQ"
+  }
 }

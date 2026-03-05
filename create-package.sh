@@ -82,9 +82,9 @@ else
   # Create package
   echo "Creating package..."
   if [ "$PACKAGE_TYPE" = "Managed" ]; then
-    CREATE_CMD="sf package create --name \"$PACKAGE_NAME\" --description \"$PACKAGE_DESC\" --package-type Managed --path force-app"
+    CREATE_CMD="sf package create --name \"$PACKAGE_NAME\" --description \"$PACKAGE_DESC\" --package-type Managed --path package"
   else
-    CREATE_CMD="sf package create --name \"$PACKAGE_NAME\" --description \"$PACKAGE_DESC\" --package-type Unlocked --path force-app"
+    CREATE_CMD="sf package create --name \"$PACKAGE_NAME\" --description \"$PACKAGE_DESC\" --package-type Unlocked --path package"
   fi
   
   PACKAGE_RESULT=$(eval $CREATE_CMD --json)
@@ -140,4 +140,3 @@ echo "║   Package creation complete!                               ║"
 echo "╚════════════════════════════════════════════════════════════╝"
 echo ""
 echo "📚 See PACKAGE_CREATION_GUIDE.md for full documentation"
-
