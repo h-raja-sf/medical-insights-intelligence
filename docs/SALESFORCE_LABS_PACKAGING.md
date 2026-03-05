@@ -13,8 +13,6 @@ Platform-native scope for this package:
 - No Apex triggers
 - No custom objects
 - No custom fields
-- No packaged agent planner bundle metadata (avoid active-agent deploy conflicts)
-- No deprecated `Insight_Trigger_Flow`
 - Flow tagging policy: up to 3 matches each for Account/Product/Subject, capped at 8 total tags per insight
 
 ## Gate 1: Preflight
@@ -36,7 +34,7 @@ Validates:
 2. Required metadata presence.
 3. Platform-native guardrails.
 4. Security hardening (no over-privileged packaged MI permission sets).
-5. Required LSC object availability in target org.
+5. Required Agentforce for Life Sciences object availability in target org.
 6. MedicalInsight/junction createability probe via Apex describe.
 
 ## Gate 2: Dry-Run Deploy Validation

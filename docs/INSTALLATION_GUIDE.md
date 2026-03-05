@@ -1,13 +1,13 @@
 # Medical Insights Intelligence - Installation Guide
 
-This guide is written for admins. Goal: install once, assign permissions, and let field medical users dictate insights without extra training.
+This guide is for admins setting up Medical Insights Intelligence for the first time.
+Goal: install once, assign access, and allow field medical users to dictate insights with no extra training.
 
 ## 1) Prerequisites
 
 Required:
 - Salesforce Enterprise Edition or higher
-- Life Sciences Cloud enabled
-- Agentforce enabled
+- Agentforce for Life Sciences enabled
 
 Required standard objects:
 - `MedicalInsight`
@@ -48,7 +48,8 @@ Recommended format for `Subject.Description`:
 
 ## 5) Configure Agentforce Action
 
-This package ships the capture function, but your org-specific agent/topic wiring should be configured in org.
+This package includes the capture function.
+You still need to wire it into your org's Agentforce Topics & Actions.
 
 In Agentforce Topics & Actions:
 1. Add/Update an action that calls `MI_Capture_Medical_Insight`
@@ -84,7 +85,7 @@ No subject tag:
 - Verify active `Other` subject exists for fallback.
 
 Insight created but UX feels slow:
-- Confirm agent action is calling `MI_Capture_Medical_Insight` (fast path), not legacy workflows.
+- Confirm the agent action is calling `MI_Capture_Medical_Insight`.
 
 ## 8) Packaging/Admin Validation Commands
 

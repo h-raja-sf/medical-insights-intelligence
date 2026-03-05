@@ -1,12 +1,12 @@
 # Medical Insights Intelligence
 
-Medical Insights Intelligence is a platform-native package for capturing Medical Insight dictations in Life Sciences Cloud and creating standard LSC junction links.
+Medical Insights Intelligence is a platform-native package for capturing Medical Insight dictations in Agentforce for Life Sciences and creating standard insight tags.
 
 This package is intentionally lean:
 - No Apex classes
 - No custom objects
 - No custom fields
-- Uses only standard LSC objects, flows, GenAI function metadata, layouts, and permission sets
+- Uses only standard objects, flows, GenAI function metadata, layouts, and permission sets
 
 ## What It Does
 
@@ -43,7 +43,7 @@ When an Agentforce action calls `MI_Capture_Medical_Insight`, the flow `MI_Captu
 
 Use the full install sequence in [docs/INSTALLATION_GUIDE.md](docs/INSTALLATION_GUIDE.md).
 
-Short version:
+Short version for first-time setup:
 1. Install package.
 2. Assign permission sets:
    - Field medical users: `Medical Insights - MSL User`
