@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
-    <description>objects and permissions that need to be added to all LS personas</description>
-    <hasActivationRequired>false</hasActivationRequired>
-    <label>LS LSC Additional Object Access and Permissions - All Users</label>
-</PermissionSet>

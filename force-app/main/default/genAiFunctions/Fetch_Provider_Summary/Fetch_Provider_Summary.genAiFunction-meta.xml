@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
-    <description>Run the autolaunched Flow “Fetch_Provider_Summary”.&lt;br&gt;• Pass the providerId input exactly as received from the user or the UI context.&lt;br&gt;• The Flow returns summaryText (territory-filtered KeyInformationSummary).&lt;br&gt;• If summaryText is blank, set it to “No provider summary available for your territory.”&lt;br&gt;• Do not expose any other Flow variables.</description>
-    <invocationTarget>Fetch_Provider_Summary</invocationTarget>
-    <invocationTargetType>flow</invocationTargetType>
-    <isConfirmationRequired>false</isConfirmationRequired>
-    <masterLabel>Fetch Provider Summary</masterLabel>
-</GenAiFunction>

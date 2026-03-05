@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
-    <description>Summary for HCP, Physician</description>
-    <invocationTarget>NYWT_HCP_Summary_Prompt</invocationTarget>
-    <invocationTargetType>generatePromptResponse</invocationTargetType>
-    <isConfirmationRequired>false</isConfirmationRequired>
-    <masterLabel>HCP Summary Prompt</masterLabel>
-</GenAiFunction>
