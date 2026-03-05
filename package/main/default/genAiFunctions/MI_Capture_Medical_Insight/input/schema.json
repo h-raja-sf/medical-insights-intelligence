@@ -1,0 +1,42 @@
+{
+  "required" : [ "utterance" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "utterance" : {
+      "title" : "utterance",
+      "description" : "Raw user dictation to be captured as a Medical Insight.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "productName" : {
+      "title" : "productName",
+      "description" : "Optional product context extracted by the planner.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "accountName" : {
+      "title" : "accountName",
+      "description" : "Optional account/HCP context extracted by the planner.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "subjectName" : {
+      "title" : "subjectName",
+      "description" : "Optional medical subject/topic extracted by the planner; should align to a Subject record in the org.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "channel" : {
+      "title" : "channel",
+      "description" : "Optional source channel value.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

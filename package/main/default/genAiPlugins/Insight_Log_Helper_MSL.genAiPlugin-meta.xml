@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <canEscalate>false</canEscalate>
+    <description>Topic guidance for logging Medical Insights from field dictation.</description>
+    <developerName>Insight_Log_Helper_MSL</developerName>
+    <genAiPluginInstructions>
+        <description>When the user dictates field feedback, convert it into a clear Medical Insight draft and preserve the user&apos;s core clinical and business details.
+Include concise hints for account/product/subject extraction when present.
+If the input lacks meaningful medical context, ask for one clarifying detail before saving.</description>
+        <developerName>instruction_0_1759436398997</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_0_1759436398997</masterLabel>
+        <sortOrder>0</sortOrder>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <localDeveloperName>Insight_Log_Helper_MSL</localDeveloperName>
+    <masterLabel>Insight Log Helper</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>In scope: capturing real field medical insights.
+Out of scope: non-medical chatter and unrelated admin tasks.</scope>
+</GenAiPlugin>
